@@ -1,0 +1,205 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Mar 19 18:45:39 2023
+# Process ID: 15836
+# Current directory: F:/projects/vga/hardware/mipsvga/mipsvga.runs/impl_1
+# Command line: vivado.exe -log TopLevel_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source TopLevel_wrapper.tcl -notrace
+# Log file: F:/projects/vga/hardware/mipsvga/mipsvga.runs/impl_1/TopLevel_wrapper.vdi
+# Journal file: F:/projects/vga/hardware/mipsvga/mipsvga.runs/impl_1\vivado.jou
+# Running On: EVA-01, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 12, Host memory: 34282 MB
+#-----------------------------------------------------------
+source TopLevel_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/xilinx/Vivado/2022.2/data/ip'.
+add_files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 418.062 ; gain = 10.148
+add_files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 418.062 ; gain = 0.000
+Command: link_design -top TopLevel_wrapper -part xc7a35tcpg236-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/TopLevel/ip/TopLevel_Datapath_wrapper_0_0/TopLevel_Datapath_wrapper_0_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/TopLevel/ip/TopLevel_controller_wrapper_0_0/TopLevel_controller_wrapper_0_0.dcp' for cell 'TopLevel_i/controller_wrapper_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_ALUControl_0_0/Datapath_ALUControl_0_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/ALUControl_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_Control_0_0/Datapath_Control_0_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/Control_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_Mux2_0_0/Datapath_Mux2_0_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/Mux2_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_Mux2_1_0/Datapath_Mux2_1_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/Mux2_1'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_Mux2_2_0/Datapath_Mux2_2_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/Mux2_2'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_Mux2_3_0/Datapath_Mux2_3_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/Mux2_3'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_Mux2d5_0_0/Datapath_Mux2d5_0_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/Mux2d5_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_PCADD_0_0/Datapath_PCADD_0_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/PCADD_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_PC_0_0/Datapath_PC_0_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/PC_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_ShiftLeft2_0_0/Datapath_ShiftLeft2_0_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/ShiftLeft2_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_ShiftLeft2d26_0_0/Datapath_ShiftLeft2d26_0_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/ShiftLeft2d26_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_SignExtend_0_0/Datapath_SignExtend_0_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/SignExtend_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_add_0_0/Datapath_add_0_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/add_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_alu_0_0/Datapath_alu_0_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/alu_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_ander_0_0/Datapath_ander_0_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/ander_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_datamem_0_0/Datapath_datamem_0_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/datamem_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_instmem_0_0/Datapath_instmem_0_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/instmem_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_regfile_0_0/Datapath_regfile_0_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/regfile_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_slicer_0_0/Datapath_slicer_0_0.dcp' for cell 'TopLevel_i/Datapath_wrapper_0/U0/Datapath_i/slicer_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/controller/ip/controller_clockdivider_0_0/controller_clockdivider_0_0.dcp' for cell 'TopLevel_i/controller_wrapper_0/U0/controller_i/clockdivider_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/controller/ip/controller_color_0_0/controller_color_0_0.dcp' for cell 'TopLevel_i/controller_wrapper_0/U0/controller_i/color_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/controller/ip/controller_comparator_0_0/controller_comparator_0_0.dcp' for cell 'TopLevel_i/controller_wrapper_0/U0/controller_i/comparator_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/controller/ip/controller_hcount_0_0/controller_hcount_0_0.dcp' for cell 'TopLevel_i/controller_wrapper_0/U0/controller_i/hcount_0'
+INFO: [Project 1-454] Reading design checkpoint 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/controller/ip/controller_vcount_0_0/controller_vcount_0_0.dcp' for cell 'TopLevel_i/controller_wrapper_0/U0/controller_i/vcount_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 891.430 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 6659 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 3 CPU seconds
+WARNING: [Netlist 29-43] Netlist 'TopLevel_wrapper' is not ideal for floorplanning, since the cellview 'Datapath_datamem_0_0_datamem' defined in file 'Datapath_datamem_0_0.edf' contains large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [F:/projects/vga/hardware/mips.xdc]
+Finished Parsing XDC File [F:/projects/vga/hardware/mips.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1094.145 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4814 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 4800 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+
+36 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1094.145 ; gain = 676.082
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 1120.102 ; gain = 25.957
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 20a171d1e
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1719.734 ; gain = 599.633
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 2748f9ef6
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2060.969 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 1325 cells and removed 2673 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 1ac8c88fd
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 2060.969 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 1 cells and removed 5 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1a3684ff4
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 2060.969 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 821 cells
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG clk_IBUF_BUFG_inst to drive 4879 load(s) on clock net clk_IBUF_BUFG
+INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
+Phase 4 BUFG optimization | Checksum: 25b67e72e
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2060.969 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 25b67e72e
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2060.969 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 25b67e72e
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2060.969 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |            1325  |            2673  |                                              0  |
+|  Constant propagation         |               1  |               5  |                                              0  |
+|  Sweep                        |               0  |             821  |                                              0  |
+|  BUFG optimization            |               1  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 2060.969 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1df94e86f
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2060.969 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 1df94e86f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 2060.969 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1df94e86f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2060.969 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2060.969 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 1df94e86f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 2060.969 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+55 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:18 . Memory (MB): peak = 2060.969 ; gain = 966.824
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.102 . Memory (MB): peak = 2060.969 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/impl_1/TopLevel_wrapper_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file TopLevel_wrapper_drc_opted.rpt -pb TopLevel_wrapper_drc_opted.pb -rpx TopLevel_wrapper_drc_opted.rpx
+Command: report_drc -file TopLevel_wrapper_drc_opted.rpt -pb TopLevel_wrapper_drc_opted.pb -rpx TopLevel_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file F:/projects/vga/hardware/mipsvga/mipsvga.runs/impl_1/TopLevel_wrapper_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a35t'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC UTLZ-1] Resource utilization: LUT as Distributed RAM over-utilized in Top Level Design (This design requires more LUT as Distributed RAM cells than are available in the target device. This design requires 19248 of such cell types but only 9600 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device. Please set tcl parameter "drc.disableLUTOverUtilError" to 1 to change this error to warning.)
+ERROR: [DRC UTLZ-1] Resource utilization: LUT as Memory over-utilized in Top Level Design (This design requires more LUT as Memory cells than are available in the target device. This design requires 19248 of such cell types but only 9600 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device. Please set tcl parameter "drc.disableLUTOverUtilError" to 1 to change this error to warning.)
+ERROR: [DRC UTLZ-1] Resource utilization: RAMD64E over-utilized in Top Level Design (This design requires more RAMD64E cells than are available in the target device. This design requires 19200 of such cell types but only 9600 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [DRC UTLZ-1] Resource utilization: Slice LUTs over-utilized in Top Level Design (This design requires more Slice LUTs cells than are available in the target device. This design requires 24511 of such cell types but only 20800 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device. Please set tcl parameter "drc.disableLUTOverUtilError" to 1 to change this error to warning.)
+INFO: [Vivado_Tcl 4-198] DRC finished with 4 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-23] Error(s) found during DRC. Placer not run.
+INFO: [Common 17-83] Releasing license: Implementation
+69 Infos, 1 Warnings, 0 Critical Warnings and 5 Errors encountered.
+place_design failed
+ERROR: [Common 17-39] 'place_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 19 18:46:49 2023...

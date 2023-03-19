@@ -1,0 +1,468 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Mar 19 18:43:55 2023
+# Process ID: 2372
+# Current directory: F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1
+# Command line: vivado.exe -log TopLevel_Datapath_wrapper_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TopLevel_Datapath_wrapper_0_0.tcl
+# Log file: F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/TopLevel_Datapath_wrapper_0_0.vds
+# Journal file: F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1\vivado.jou
+# Running On: EVA-01, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 12, Host memory: 34282 MB
+#-----------------------------------------------------------
+source TopLevel_Datapath_wrapper_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 383.750 ; gain = 46.410
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/xilinx/Vivado/2022.2/data/ip'.
+add_files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:09 . Memory (MB): peak = 412.586 ; gain = 4.000
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: TopLevel_Datapath_wrapper_0_0
+Command: synth_design -top TopLevel_Datapath_wrapper_0_0 -part xc7a35tcpg236-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17188
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [F:/xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1207.246 ; gain = 407.426
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'TopLevel_Datapath_wrapper_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/TopLevel/ip/TopLevel_Datapath_wrapper_0_0/synth/TopLevel_Datapath_wrapper_0_0.vhd:68]
+INFO: [Synth 8-3491] module 'Datapath_wrapper' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/hdl/Datapath_wrapper.vhd:14' bound to instance 'U0' of component 'Datapath_wrapper' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/TopLevel/ip/TopLevel_Datapath_wrapper_0_0/synth/TopLevel_Datapath_wrapper_0_0.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'Datapath_wrapper' [F:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/hdl/Datapath_wrapper.vhd:26]
+INFO: [Synth 8-3491] module 'Datapath' declared at 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:14' bound to instance 'Datapath_i' of component 'Datapath' [F:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/hdl/Datapath_wrapper.vhd:39]
+INFO: [Synth 8-638] synthesizing module 'Datapath' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:30]
+INFO: [Synth 8-3491] module 'Datapath_ALUControl_0_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_ALUControl_0_0_stub.vhdl:5' bound to instance 'ALUControl_0' of component 'Datapath_ALUControl_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:262]
+INFO: [Synth 8-638] synthesizing module 'Datapath_ALUControl_0_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_ALUControl_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'Datapath_Control_0_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_Control_0_0_stub.vhdl:5' bound to instance 'Control_0' of component 'Datapath_Control_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:268]
+INFO: [Synth 8-638] synthesizing module 'Datapath_Control_0_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_Control_0_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'Datapath_Mux2_0_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_Mux2_0_0_stub.vhdl:5' bound to instance 'Mux2_0' of component 'Datapath_Mux2_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:281]
+INFO: [Synth 8-638] synthesizing module 'Datapath_Mux2_0_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_Mux2_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'Datapath_Mux2_1_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_Mux2_1_0_stub.vhdl:5' bound to instance 'Mux2_1' of component 'Datapath_Mux2_1_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:288]
+INFO: [Synth 8-638] synthesizing module 'Datapath_Mux2_1_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_Mux2_1_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'Datapath_Mux2_2_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_Mux2_2_0_stub.vhdl:5' bound to instance 'Mux2_2' of component 'Datapath_Mux2_2_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:295]
+INFO: [Synth 8-638] synthesizing module 'Datapath_Mux2_2_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_Mux2_2_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'Datapath_Mux2_3_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_Mux2_3_0_stub.vhdl:5' bound to instance 'Mux2_3' of component 'Datapath_Mux2_3_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:302]
+INFO: [Synth 8-638] synthesizing module 'Datapath_Mux2_3_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_Mux2_3_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'Datapath_Mux2d5_0_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_Mux2d5_0_0_stub.vhdl:5' bound to instance 'Mux2d5_0' of component 'Datapath_Mux2d5_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:309]
+INFO: [Synth 8-638] synthesizing module 'Datapath_Mux2d5_0_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_Mux2d5_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'Datapath_PCADD_0_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_PCADD_0_0_stub.vhdl:5' bound to instance 'PCADD_0' of component 'Datapath_PCADD_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:316]
+INFO: [Synth 8-638] synthesizing module 'Datapath_PCADD_0_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_PCADD_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'Datapath_PC_0_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_PC_0_0_stub.vhdl:5' bound to instance 'PC_0' of component 'Datapath_PC_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:321]
+INFO: [Synth 8-638] synthesizing module 'Datapath_PC_0_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_PC_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'Datapath_ShiftLeft2_0_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_ShiftLeft2_0_0_stub.vhdl:5' bound to instance 'ShiftLeft2_0' of component 'Datapath_ShiftLeft2_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:328]
+INFO: [Synth 8-638] synthesizing module 'Datapath_ShiftLeft2_0_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_ShiftLeft2_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'Datapath_ShiftLeft2d26_0_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_ShiftLeft2d26_0_0_stub.vhdl:5' bound to instance 'ShiftLeft2d26_0' of component 'Datapath_ShiftLeft2d26_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:333]
+INFO: [Synth 8-638] synthesizing module 'Datapath_ShiftLeft2d26_0_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_ShiftLeft2d26_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'Datapath_SignExtend_0_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_SignExtend_0_0_stub.vhdl:5' bound to instance 'SignExtend_0' of component 'Datapath_SignExtend_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:338]
+INFO: [Synth 8-638] synthesizing module 'Datapath_SignExtend_0_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_SignExtend_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'Datapath_add_0_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_add_0_0_stub.vhdl:5' bound to instance 'add_0' of component 'Datapath_add_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:343]
+INFO: [Synth 8-638] synthesizing module 'Datapath_add_0_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_add_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'Datapath_alu_0_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_alu_0_0_stub.vhdl:5' bound to instance 'alu_0' of component 'Datapath_alu_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:349]
+INFO: [Synth 8-638] synthesizing module 'Datapath_alu_0_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_alu_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'Datapath_ander_0_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_ander_0_0_stub.vhdl:5' bound to instance 'ander_0' of component 'Datapath_ander_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:360]
+INFO: [Synth 8-638] synthesizing module 'Datapath_ander_0_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_ander_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'Datapath_datamem_0_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_datamem_0_0_stub.vhdl:5' bound to instance 'datamem_0' of component 'Datapath_datamem_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:366]
+INFO: [Synth 8-638] synthesizing module 'Datapath_datamem_0_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_datamem_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'Datapath_instmem_0_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_instmem_0_0_stub.vhdl:5' bound to instance 'instmem_0' of component 'Datapath_instmem_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:377]
+INFO: [Synth 8-638] synthesizing module 'Datapath_instmem_0_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_instmem_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'Datapath_regfile_0_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_regfile_0_0_stub.vhdl:5' bound to instance 'regfile_0' of component 'Datapath_regfile_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:382]
+INFO: [Synth 8-638] synthesizing module 'Datapath_regfile_0_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_regfile_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'Datapath_slicer_0_0' declared at 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_slicer_0_0_stub.vhdl:5' bound to instance 'slicer_0' of component 'Datapath_slicer_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:393]
+INFO: [Synth 8-638] synthesizing module 'Datapath_slicer_0_0' [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/.Xil/Vivado-2372-EVA-01/realtime/Datapath_slicer_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'Datapath_xlconcat_0_0' declared at 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_xlconcat_0_0/synth/Datapath_xlconcat_0_0.v:53' bound to instance 'xlconcat_0' of component 'Datapath_xlconcat_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:404]
+INFO: [Synth 8-6157] synthesizing module 'Datapath_xlconcat_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_xlconcat_0_0/synth/Datapath_xlconcat_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'Datapath_xlconcat_0_0' (0#1) [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_xlconcat_0_0/synth/Datapath_xlconcat_0_0.v:53]
+INFO: [Synth 8-3491] module 'Datapath_xlconstant_0_0' declared at 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_xlconstant_0_0/synth/Datapath_xlconstant_0_0.v:53' bound to instance 'xlconstant_0' of component 'Datapath_xlconstant_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:410]
+INFO: [Synth 8-6157] synthesizing module 'Datapath_xlconstant_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_xlconstant_0_0/synth/Datapath_xlconstant_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ipshared/badb/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Datapath_xlconstant_0_0' (0#1) [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_xlconstant_0_0/synth/Datapath_xlconstant_0_0.v:53]
+INFO: [Synth 8-3491] module 'Datapath_xlslice_0_0' declared at 'f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_xlslice_0_0/synth/Datapath_xlslice_0_0.v:53' bound to instance 'xlslice_0' of component 'Datapath_xlslice_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:414]
+INFO: [Synth 8-6157] synthesizing module 'Datapath_xlslice_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_xlslice_0_0/synth/Datapath_xlslice_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (0#1) [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ipshared/11d0/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'Datapath_xlslice_0_0' (0#1) [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_xlslice_0_0/synth/Datapath_xlslice_0_0.v:53]
+INFO: [Synth 8-256] done synthesizing module 'Datapath' (0#1) [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/synth/Datapath.vhd:30]
+INFO: [Synth 8-256] done synthesizing module 'Datapath_wrapper' (0#1) [F:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/hdl/Datapath_wrapper.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'TopLevel_Datapath_wrapper_0_0' (0#1) [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/TopLevel/ip/TopLevel_Datapath_wrapper_0_0/synth/TopLevel_Datapath_wrapper_0_0.vhd:68]
+WARNING: [Synth 8-7129] Port Din[27] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[26] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[25] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[24] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[23] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[22] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[21] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[20] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[19] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[18] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[17] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[16] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[15] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[14] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[13] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[12] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[11] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[10] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[9] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[8] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[7] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[6] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[5] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[4] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[3] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[2] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[1] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[0] in module xlslice_v1_0_2_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In2[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In70[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In71[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In72[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In73[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1304.969 ; gain = 505.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1304.969 ; gain = 505.148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1304.969 ; gain = 505.148
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1304.969 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_PC_0_0/Datapath_PC_0_0/Datapath_PC_0_0_in_context.xdc] for cell 'U0/Datapath_i/PC_0'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_PC_0_0/Datapath_PC_0_0/Datapath_PC_0_0_in_context.xdc] for cell 'U0/Datapath_i/PC_0'
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_Control_0_0/Datapath_Control_0_0/Datapath_Control_0_0_in_context.xdc] for cell 'U0/Datapath_i/Control_0'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_Control_0_0/Datapath_Control_0_0/Datapath_Control_0_0_in_context.xdc] for cell 'U0/Datapath_i/Control_0'
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_PCADD_0_0/Datapath_PCADD_0_0/Datapath_PCADD_0_0_in_context.xdc] for cell 'U0/Datapath_i/PCADD_0'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_PCADD_0_0/Datapath_PCADD_0_0/Datapath_PCADD_0_0_in_context.xdc] for cell 'U0/Datapath_i/PCADD_0'
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_Mux2d5_0_0/Datapath_Mux2d5_0_0/Datapath_Mux2d5_0_0_in_context.xdc] for cell 'U0/Datapath_i/Mux2d5_0'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_Mux2d5_0_0/Datapath_Mux2d5_0_0/Datapath_Mux2d5_0_0_in_context.xdc] for cell 'U0/Datapath_i/Mux2d5_0'
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_SignExtend_0_0/Datapath_SignExtend_0_0/Datapath_SignExtend_0_0_in_context.xdc] for cell 'U0/Datapath_i/SignExtend_0'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_SignExtend_0_0/Datapath_SignExtend_0_0/Datapath_SignExtend_0_0_in_context.xdc] for cell 'U0/Datapath_i/SignExtend_0'
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_Mux2_0_0/Datapath_Mux2_0_0/Datapath_Mux2_0_0_in_context.xdc] for cell 'U0/Datapath_i/Mux2_0'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_Mux2_0_0/Datapath_Mux2_0_0/Datapath_Mux2_0_0_in_context.xdc] for cell 'U0/Datapath_i/Mux2_0'
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_ander_0_0/Datapath_ander_0_0/Datapath_ander_0_0_in_context.xdc] for cell 'U0/Datapath_i/ander_0'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_ander_0_0/Datapath_ander_0_0/Datapath_ander_0_0_in_context.xdc] for cell 'U0/Datapath_i/ander_0'
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_ShiftLeft2d26_0_0/Datapath_ShiftLeft2d26_0_0/Datapath_ShiftLeft2d26_0_0_in_context.xdc] for cell 'U0/Datapath_i/ShiftLeft2d26_0'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_ShiftLeft2d26_0_0/Datapath_ShiftLeft2d26_0_0/Datapath_ShiftLeft2d26_0_0_in_context.xdc] for cell 'U0/Datapath_i/ShiftLeft2d26_0'
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_ShiftLeft2_0_0/Datapath_ShiftLeft2_0_0/Datapath_ShiftLeft2_0_0_in_context.xdc] for cell 'U0/Datapath_i/ShiftLeft2_0'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_ShiftLeft2_0_0/Datapath_ShiftLeft2_0_0/Datapath_ShiftLeft2_0_0_in_context.xdc] for cell 'U0/Datapath_i/ShiftLeft2_0'
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_add_0_0/Datapath_add_0_0/Datapath_add_0_0_in_context.xdc] for cell 'U0/Datapath_i/add_0'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_add_0_0/Datapath_add_0_0/Datapath_add_0_0_in_context.xdc] for cell 'U0/Datapath_i/add_0'
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_Mux2_1_0/Datapath_Mux2_1_0/Datapath_Mux2_1_0_in_context.xdc] for cell 'U0/Datapath_i/Mux2_1'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_Mux2_1_0/Datapath_Mux2_1_0/Datapath_Mux2_1_0_in_context.xdc] for cell 'U0/Datapath_i/Mux2_1'
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_Mux2_2_0/Datapath_Mux2_2_0/Datapath_Mux2_2_0_in_context.xdc] for cell 'U0/Datapath_i/Mux2_2'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_Mux2_2_0/Datapath_Mux2_2_0/Datapath_Mux2_2_0_in_context.xdc] for cell 'U0/Datapath_i/Mux2_2'
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_Mux2_3_0/Datapath_Mux2_3_0/Datapath_Mux2_3_0_in_context.xdc] for cell 'U0/Datapath_i/Mux2_3'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_Mux2_3_0/Datapath_Mux2_3_0/Datapath_Mux2_3_0_in_context.xdc] for cell 'U0/Datapath_i/Mux2_3'
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_regfile_0_0/Datapath_regfile_0_0/Datapath_regfile_0_0_in_context.xdc] for cell 'U0/Datapath_i/regfile_0'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_regfile_0_0/Datapath_regfile_0_0/Datapath_regfile_0_0_in_context.xdc] for cell 'U0/Datapath_i/regfile_0'
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_ALUControl_0_0/Datapath_ALUControl_0_0/Datapath_ALUControl_0_0_in_context.xdc] for cell 'U0/Datapath_i/ALUControl_0'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_ALUControl_0_0/Datapath_ALUControl_0_0/Datapath_ALUControl_0_0_in_context.xdc] for cell 'U0/Datapath_i/ALUControl_0'
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_slicer_0_0/Datapath_slicer_0_0/Datapath_slicer_0_0_in_context.xdc] for cell 'U0/Datapath_i/slicer_0'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_slicer_0_0/Datapath_slicer_0_0/Datapath_slicer_0_0_in_context.xdc] for cell 'U0/Datapath_i/slicer_0'
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_alu_0_0/Datapath_alu_0_0/Datapath_alu_0_0_in_context.xdc] for cell 'U0/Datapath_i/alu_0'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_alu_0_0/Datapath_alu_0_0/Datapath_alu_0_0_in_context.xdc] for cell 'U0/Datapath_i/alu_0'
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_instmem_0_0/Datapath_instmem_0_0/Datapath_instmem_0_0_in_context.xdc] for cell 'U0/Datapath_i/instmem_0'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_instmem_0_0/Datapath_instmem_0_0/Datapath_instmem_0_0_in_context.xdc] for cell 'U0/Datapath_i/instmem_0'
+Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_datamem_0_0/Datapath_datamem_0_0/Datapath_datamem_0_0_in_context.xdc] for cell 'U0/Datapath_i/datamem_0'
+Finished Parsing XDC File [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/ip/Datapath_datamem_0_0/Datapath_datamem_0_0/Datapath_datamem_0_0_in_context.xdc] for cell 'U0/Datapath_i/datamem_0'
+Parsing XDC File [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1327.629 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1327.789 ; gain = 0.160
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [F:/xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1327.789 ; gain = 527.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1327.789 ; gain = 527.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/PC_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/Control_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/PCADD_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/Mux2d5_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/SignExtend_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/Mux2_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/xlconstant_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/ander_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/ShiftLeft2d26_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/ShiftLeft2_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/add_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/xlconcat_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/xlslice_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/Mux2_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/Mux2_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/Mux2_3. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/regfile_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/ALUControl_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/slicer_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/alu_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/instmem_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/Datapath_i/datamem_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1327.789 ; gain = 527.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1327.789 ; gain = 527.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1327.789 ; gain = 527.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1327.789 ; gain = 527.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1327.789 ; gain = 527.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1327.789 ; gain = 527.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1327.789 ; gain = 527.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1327.789 ; gain = 527.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1327.789 ; gain = 527.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1327.789 ; gain = 527.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1327.789 ; gain = 527.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1327.789 ; gain = 527.969
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+---------------------------+----------+
+|      |BlackBox name              |Instances |
++------+---------------------------+----------+
+|1     |Datapath_ALUControl_0_0    |         1|
+|2     |Datapath_Control_0_0       |         1|
+|3     |Datapath_Mux2_0_0          |         1|
+|4     |Datapath_Mux2_1_0          |         1|
+|5     |Datapath_Mux2_2_0          |         1|
+|6     |Datapath_Mux2_3_0          |         1|
+|7     |Datapath_Mux2d5_0_0        |         1|
+|8     |Datapath_PCADD_0_0         |         1|
+|9     |Datapath_PC_0_0            |         1|
+|10    |Datapath_ShiftLeft2_0_0    |         1|
+|11    |Datapath_ShiftLeft2d26_0_0 |         1|
+|12    |Datapath_SignExtend_0_0    |         1|
+|13    |Datapath_add_0_0           |         1|
+|14    |Datapath_alu_0_0           |         1|
+|15    |Datapath_ander_0_0         |         1|
+|16    |Datapath_datamem_0_0       |         1|
+|17    |Datapath_instmem_0_0       |         1|
+|18    |Datapath_regfile_0_0       |         1|
+|19    |Datapath_slicer_0_0        |         1|
++------+---------------------------+----------+
+
+Report Cell Usage: 
++------+--------------------------------+------+
+|      |Cell                            |Count |
++------+--------------------------------+------+
+|1     |Datapath_ALUControl_0_0_bbox    |     1|
+|2     |Datapath_Control_0_0_bbox       |     1|
+|3     |Datapath_Mux2_0_0_bbox          |     1|
+|4     |Datapath_Mux2_1_0_bbox          |     1|
+|5     |Datapath_Mux2_2_0_bbox          |     1|
+|6     |Datapath_Mux2_3_0_bbox          |     1|
+|7     |Datapath_Mux2d5_0_0_bbox        |     1|
+|8     |Datapath_PCADD_0_0_bbox         |     1|
+|9     |Datapath_PC_0_0_bbox            |     1|
+|10    |Datapath_ShiftLeft2_0_0_bbox    |     1|
+|11    |Datapath_ShiftLeft2d26_0_0_bbox |     1|
+|12    |Datapath_SignExtend_0_0_bbox    |     1|
+|13    |Datapath_add_0_0_bbox           |     1|
+|14    |Datapath_alu_0_0_bbox           |     1|
+|15    |Datapath_ander_0_0_bbox         |     1|
+|16    |Datapath_datamem_0_0_bbox       |     1|
+|17    |Datapath_instmem_0_0_bbox       |     1|
+|18    |Datapath_regfile_0_0_bbox       |     1|
+|19    |Datapath_slicer_0_0_bbox        |     1|
++------+--------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1327.789 ; gain = 527.969
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 29 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 1327.789 ; gain = 505.148
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1327.789 ; gain = 527.969
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1327.789 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1334.336 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 9f54d37c
+INFO: [Common 17-83] Releasing license: Synthesis
+81 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1338.352 ; gain = 919.855
+INFO: [Common 17-1381] The checkpoint 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/TopLevel_Datapath_wrapper_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP TopLevel_Datapath_wrapper_0_0, cache-ID = 3540417e9f92a926
+INFO: [Coretcl 2-1174] Renamed 23 cell refs.
+INFO: [Common 17-1381] The checkpoint 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1/TopLevel_Datapath_wrapper_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TopLevel_Datapath_wrapper_0_0_utilization_synth.rpt -pb TopLevel_Datapath_wrapper_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 19 18:44:45 2023...

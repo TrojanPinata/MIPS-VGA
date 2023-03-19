@@ -1,0 +1,271 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xF931BE31F963606E",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../mipsvga.gen/sources_1/bd/TopLevel",
+      "name": "TopLevel",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "controller_wrapper_0": "",
+      "Datapath_wrapper_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "reset",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "TopLevel_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "vgaRed": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "vgaGreen": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "vgaBlue": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "Hsync": {
+        "direction": "O"
+      },
+      "Vsync": {
+        "direction": "O"
+      },
+      "reset": {
+        "direction": "I"
+      },
+      "Carryout": {
+        "direction": "O"
+      },
+      "Zero": {
+        "direction": "O"
+      },
+      "Overflow": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "controller_wrapper_0": {
+        "vlnv": "xilinx.com:module_ref:controller_wrapper:1.0",
+        "xci_name": "TopLevel_controller_wrapper_0_0",
+        "xci_path": "ip\\TopLevel_controller_wrapper_0_0\\TopLevel_controller_wrapper_0_0.xci",
+        "inst_hier_path": "controller_wrapper_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "controller_wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "TopLevel_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "hsync": {
+            "direction": "O"
+          },
+          "memaddr": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "memdata": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "vgaBlue": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "vgaGreen": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "vgaRed": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "vsync": {
+            "direction": "O"
+          }
+        }
+      },
+      "Datapath_wrapper_0": {
+        "vlnv": "xilinx.com:module_ref:Datapath_wrapper:1.0",
+        "xci_name": "TopLevel_Datapath_wrapper_0_0",
+        "xci_path": "ip\\TopLevel_Datapath_wrapper_0_0\\TopLevel_Datapath_wrapper_0_0.xci",
+        "inst_hier_path": "Datapath_wrapper_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Datapath_wrapper",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Carryout": {
+            "direction": "O"
+          },
+          "Overflow": {
+            "direction": "O"
+          },
+          "Reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "Zero": {
+            "direction": "O"
+          },
+          "clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "Reset",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "TopLevel_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "memaddr": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "memread": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Datapath_wrapper_0_Carryout": {
+        "ports": [
+          "Datapath_wrapper_0/Carryout",
+          "Carryout"
+        ]
+      },
+      "Datapath_wrapper_0_Overflow": {
+        "ports": [
+          "Datapath_wrapper_0/Overflow",
+          "Overflow"
+        ]
+      },
+      "Datapath_wrapper_0_Zero": {
+        "ports": [
+          "Datapath_wrapper_0/Zero",
+          "Zero"
+        ]
+      },
+      "Datapath_wrapper_0_memread": {
+        "ports": [
+          "Datapath_wrapper_0/memread",
+          "controller_wrapper_0/memdata"
+        ]
+      },
+      "clock_1": {
+        "ports": [
+          "clk",
+          "controller_wrapper_0/clock",
+          "Datapath_wrapper_0/clock"
+        ]
+      },
+      "controller_wrapper_0_hsync": {
+        "ports": [
+          "controller_wrapper_0/hsync",
+          "Hsync"
+        ]
+      },
+      "controller_wrapper_0_memaddr": {
+        "ports": [
+          "controller_wrapper_0/memaddr",
+          "Datapath_wrapper_0/memaddr"
+        ]
+      },
+      "controller_wrapper_0_vgaBlue": {
+        "ports": [
+          "controller_wrapper_0/vgaBlue",
+          "vgaBlue"
+        ]
+      },
+      "controller_wrapper_0_vgaGreen": {
+        "ports": [
+          "controller_wrapper_0/vgaGreen",
+          "vgaGreen"
+        ]
+      },
+      "controller_wrapper_0_vgaRed": {
+        "ports": [
+          "controller_wrapper_0/vgaRed",
+          "vgaRed"
+        ]
+      },
+      "controller_wrapper_0_vsync": {
+        "ports": [
+          "controller_wrapper_0/vsync",
+          "Vsync"
+        ]
+      },
+      "reset_1": {
+        "ports": [
+          "reset",
+          "Datapath_wrapper_0/Reset"
+        ]
+      }
+    }
+  }
+}

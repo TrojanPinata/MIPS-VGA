@@ -1,0 +1,870 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar 19 18:39:47 2023" VIVADOVERSION="2022.2">
+
+  <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:basys3:part0:1.1" DEVICE="7a35t" NAME="Datapath" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="I" NAME="Reset" SIGIS="undef" SIGNAME="External_Ports_Reset">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PC_0" PORT="Reset"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="memaddr" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_memaddr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="datamem_0" PORT="ext_addr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="memread" RIGHT="0" SIGIS="undef" SIGNAME="datamem_0_ext_read">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="datamem_0" PORT="ext_read"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Zero" SIGIS="undef" SIGNAME="alu_0_Zero">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="alu_0" PORT="Zero"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Overflow" SIGIS="undef" SIGNAME="alu_0_Overflow">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="alu_0" PORT="Overflow"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="Carryout" SIGIS="undef" SIGNAME="alu_0_Carryout">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="alu_0" PORT="Carryout"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="clock" SIGIS="undef" SIGNAME="External_Ports_clock">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="PC_0" PORT="clock"/>
+        <CONNECTION INSTANCE="regfile_0" PORT="clock"/>
+        <CONNECTION INSTANCE="datamem_0" PORT="clock"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/ALUControl_0" HWVERSION="1.0" INSTANCE="ALUControl_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ALUControl" VLNV="xilinx.com:module_ref:ALUControl:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_ALUControl_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="5" NAME="funct" RIGHT="0" SIGIS="undef" SIGNAME="slicer_0_funct">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="slicer_0" PORT="funct"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="Op" RIGHT="0" SIGIS="undef" SIGNAME="Control_0_ALUOp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Control_0" PORT="ALUOp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="ALUCntl" RIGHT="0" SIGIS="undef" SIGNAME="ALUControl_0_ALUCntl">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="alu_0" PORT="ALUCntl"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Control_0" HWVERSION="1.0" INSTANCE="Control_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Control" VLNV="xilinx.com:module_ref:Control:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_Control_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="5" NAME="Op" RIGHT="0" SIGIS="undef" SIGNAME="slicer_0_opcode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="slicer_0" PORT="opcode"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="RegDst" SIGIS="undef" SIGNAME="Control_0_RegDst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2d5_0" PORT="Sel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MemRead" SIGIS="undef" SIGNAME="Control_0_MemRead">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="datamem_0" PORT="MemRead"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MemtoReg" SIGIS="undef" SIGNAME="Control_0_MemtoReg">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_3" PORT="Sel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="MemWrite" SIGIS="undef" SIGNAME="Control_0_MemWrite">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="datamem_0" PORT="MemWrite"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="ALUSrc" SIGIS="undef" SIGNAME="Control_0_ALUSrc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_0" PORT="Sel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="RegWrite" SIGIS="undef" SIGNAME="Control_0_RegWrite">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="regfile_0" PORT="RegWrite"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Branch" SIGIS="undef" SIGNAME="Control_0_Branch">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ander_0" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Jump" SIGIS="undef" SIGNAME="Control_0_Jump">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_2" PORT="Sel"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="ALUOp" RIGHT="0" SIGIS="undef" SIGNAME="Control_0_ALUOp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALUControl_0" PORT="Op"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Mux2_0" HWVERSION="1.0" INSTANCE="Mux2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Mux2" VLNV="xilinx.com:module_ref:Mux2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_Mux2_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="A" RIGHT="0" SIGIS="undef" SIGNAME="regfile_0_read_data2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="regfile_0" PORT="read_data2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="B" RIGHT="0" SIGIS="undef" SIGNAME="SignExtend_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SignExtend_0" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="Sel" SIGIS="undef" SIGNAME="Control_0_ALUSrc">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Control_0" PORT="ALUSrc"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="Mux2_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="alu_0" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Mux2_1" HWVERSION="1.0" INSTANCE="Mux2_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Mux2" VLNV="xilinx.com:module_ref:Mux2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_Mux2_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="A" RIGHT="0" SIGIS="undef" SIGNAME="PCADD_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PCADD_0" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="B" RIGHT="0" SIGIS="undef" SIGNAME="add_0_ALUout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="add_0" PORT="ALUout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="Sel" SIGIS="undef" SIGNAME="ander_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ander_0" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="Mux2_1_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_2" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Mux2_2" HWVERSION="1.0" INSTANCE="Mux2_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Mux2" VLNV="xilinx.com:module_ref:Mux2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_Mux2_2_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="A" RIGHT="0" SIGIS="undef" SIGNAME="Mux2_1_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_1" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="B" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="Sel" SIGIS="undef" SIGNAME="Control_0_Jump">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Control_0" PORT="Jump"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="Mux2_2_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="Din"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Mux2_3" HWVERSION="1.0" INSTANCE="Mux2_3" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Mux2" VLNV="xilinx.com:module_ref:Mux2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_Mux2_3_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="A" RIGHT="0" SIGIS="undef" SIGNAME="alu_0_ALUout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="alu_0" PORT="ALUout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="B" RIGHT="0" SIGIS="undef" SIGNAME="datamem_0_Read_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="datamem_0" PORT="Read_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="Sel" SIGIS="undef" SIGNAME="Control_0_MemtoReg">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Control_0" PORT="MemtoReg"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="Mux2_3_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="regfile_0" PORT="write_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/Mux2d5_0" HWVERSION="1.0" INSTANCE="Mux2d5_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Mux2d5" VLNV="xilinx.com:module_ref:Mux2d5:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_Mux2d5_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="4" NAME="A" RIGHT="0" SIGIS="undef" SIGNAME="slicer_0_rt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="slicer_0" PORT="rt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="B" RIGHT="0" SIGIS="undef" SIGNAME="slicer_0_rd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="slicer_0" PORT="rd"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="Sel" SIGIS="undef" SIGNAME="Control_0_RegDst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Control_0" PORT="RegDst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="4" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="Mux2d5_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="regfile_0" PORT="write_reg"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/PCADD_0" HWVERSION="1.0" INSTANCE="PCADD_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PCADD" VLNV="xilinx.com:module_ref:PCADD:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_PCADD_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="PC_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="PCADD_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_0" PORT="Din"/>
+            <CONNECTION INSTANCE="Mux2_1" PORT="A"/>
+            <CONNECTION INSTANCE="add_0" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/PC_0" HWVERSION="1.0" INSTANCE="PC_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="PC" VLNV="xilinx.com:module_ref:PC:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_PC_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="Mux2_2_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_2" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="PC_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PCADD_0" PORT="Din"/>
+            <CONNECTION INSTANCE="instmem_0" PORT="read_inst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clock" SIGIS="clk" SIGNAME="External_Ports_clock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="Reset" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_Reset">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Reset"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ShiftLeft2_0" HWVERSION="1.0" INSTANCE="ShiftLeft2_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ShiftLeft2" VLNV="xilinx.com:module_ref:ShiftLeft2:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_ShiftLeft2_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="SignExtend_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SignExtend_0" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="ShiftLeft2_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="add_0" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ShiftLeft2d26_0" HWVERSION="1.0" INSTANCE="ShiftLeft2d26_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ShiftLeft2d26" VLNV="xilinx.com:module_ref:ShiftLeft2d26:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_ShiftLeft2d26_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="25" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="slicer_0_jump">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="slicer_0" PORT="jump"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="27" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="ShiftLeft2d26_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="In1"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/SignExtend_0" HWVERSION="1.0" INSTANCE="SignExtend_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="SignExtend" VLNV="xilinx.com:module_ref:SignExtend:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_SignExtend_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="15" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="slicer_0_immediate">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="slicer_0" PORT="immediate"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="SignExtend_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_0" PORT="B"/>
+            <CONNECTION INSTANCE="ShiftLeft2_0" PORT="Din"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/add_0" HWVERSION="1.0" INSTANCE="add_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="add" VLNV="xilinx.com:module_ref:add:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_add_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="A" RIGHT="0" SIGIS="undef" SIGNAME="PCADD_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PCADD_0" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="B" RIGHT="0" SIGIS="undef" SIGNAME="ShiftLeft2_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ShiftLeft2_0" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="ALUout" RIGHT="0" SIGIS="undef" SIGNAME="add_0_ALUout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_1" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/alu_0" HWVERSION="1.0" INSTANCE="alu_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="alu" VLNV="xilinx.com:module_ref:alu:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_alu_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="A" RIGHT="0" SIGIS="undef" SIGNAME="regfile_0_read_data1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="regfile_0" PORT="read_data1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="B" RIGHT="0" SIGIS="undef" SIGNAME="Mux2_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_0" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="Carryin" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="ALUCntl" RIGHT="0" SIGIS="undef" SIGNAME="ALUControl_0_ALUCntl">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALUControl_0" PORT="ALUCntl"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="ALUout" RIGHT="0" SIGIS="undef" SIGNAME="alu_0_ALUout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_3" PORT="A"/>
+            <CONNECTION INSTANCE="datamem_0" PORT="address"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Zero" SIGIS="undef" SIGNAME="alu_0_Zero">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Zero"/>
+            <CONNECTION INSTANCE="ander_0" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Overflow" SIGIS="undef" SIGNAME="alu_0_Overflow">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Overflow"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Carryout" SIGIS="undef" SIGNAME="alu_0_Carryout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="Carryout"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/ander_0" HWVERSION="1.0" INSTANCE="ander_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="ander" VLNV="xilinx.com:module_ref:ander:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_ander_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="A" SIGIS="undef" SIGNAME="Control_0_Branch">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Control_0" PORT="Branch"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="B" SIGIS="undef" SIGNAME="alu_0_Zero">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="alu_0" PORT="Zero"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="Dout" SIGIS="undef" SIGNAME="ander_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_1" PORT="Sel"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/datamem_0" HWVERSION="1.0" INSTANCE="datamem_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="datamem" VLNV="xilinx.com:module_ref:datamem:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_datamem_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clock" SIGIS="clk" SIGNAME="External_Ports_clock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="address" RIGHT="0" SIGIS="undef" SIGNAME="alu_0_ALUout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="alu_0" PORT="ALUout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="ext_addr" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_memaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="memaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="write_data" RIGHT="0" SIGIS="undef" SIGNAME="regfile_0_read_data2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="regfile_0" PORT="read_data2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="MemWrite" SIGIS="undef" SIGNAME="Control_0_MemWrite">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Control_0" PORT="MemWrite"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="MemRead" SIGIS="undef" SIGNAME="Control_0_MemRead">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Control_0" PORT="MemRead"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="Read_data" RIGHT="0" SIGIS="undef" SIGNAME="datamem_0_Read_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_3" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="ext_read" RIGHT="0" SIGIS="undef" SIGNAME="datamem_0_ext_read">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="memread"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/instmem_0" HWVERSION="1.0" INSTANCE="instmem_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="instmem" VLNV="xilinx.com:module_ref:instmem:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_instmem_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="read_inst" RIGHT="0" SIGIS="undef" SIGNAME="PC_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PC_0" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="inst_out" RIGHT="0" SIGIS="undef" SIGNAME="instmem_0_inst_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="slicer_0" PORT="instruction"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/regfile_0" HWVERSION="1.0" INSTANCE="regfile_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="regfile" VLNV="xilinx.com:module_ref:regfile:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_regfile_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clock" SIGIS="clk" SIGNAME="External_Ports_clock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RegWrite" SIGIS="undef" SIGNAME="Control_0_RegWrite">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Control_0" PORT="RegWrite"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="read_reg1" RIGHT="0" SIGIS="undef" SIGNAME="slicer_0_rs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="slicer_0" PORT="rs"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="read_reg2" RIGHT="0" SIGIS="undef" SIGNAME="slicer_0_rt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="slicer_0" PORT="rt"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="4" NAME="write_reg" RIGHT="0" SIGIS="undef" SIGNAME="Mux2d5_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2d5_0" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="write_data" RIGHT="0" SIGIS="undef" SIGNAME="Mux2_3_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_3" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="read_data1" RIGHT="0" SIGIS="undef" SIGNAME="regfile_0_read_data1">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="alu_0" PORT="A"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="read_data2" RIGHT="0" SIGIS="undef" SIGNAME="regfile_0_read_data2">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_0" PORT="A"/>
+            <CONNECTION INSTANCE="datamem_0" PORT="write_data"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/slicer_0" HWVERSION="1.0" INSTANCE="slicer_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="slicer" VLNV="xilinx.com:module_ref:slicer:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_slicer_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="instruction" RIGHT="0" SIGIS="undef" SIGNAME="instmem_0_inst_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="instmem_0" PORT="inst_out"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="opcode" RIGHT="0" SIGIS="undef" SIGNAME="slicer_0_opcode">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Control_0" PORT="Op"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="5" NAME="funct" RIGHT="0" SIGIS="undef" SIGNAME="slicer_0_funct">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ALUControl_0" PORT="funct"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="4" NAME="rs" RIGHT="0" SIGIS="undef" SIGNAME="slicer_0_rs">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="regfile_0" PORT="read_reg1"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="4" NAME="rt" RIGHT="0" SIGIS="undef" SIGNAME="slicer_0_rt">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2d5_0" PORT="A"/>
+            <CONNECTION INSTANCE="regfile_0" PORT="read_reg2"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="4" NAME="rd" RIGHT="0" SIGIS="undef" SIGNAME="slicer_0_rd">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2d5_0" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="immediate" RIGHT="0" SIGIS="undef" SIGNAME="slicer_0_immediate">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SignExtend_0" PORT="Din"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="25" NAME="jump" RIGHT="0" SIGIS="undef" SIGNAME="slicer_0_jump">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ShiftLeft2d26_0" PORT="Din"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="4" FULLNAME="/xlconcat_0" HWVERSION="2.1" INSTANCE="xlconcat_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconcat" VLNV="xilinx.com:ip:xlconcat:2.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="IN0_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="IN1_WIDTH" VALUE="28"/>
+        <PARAMETER NAME="IN2_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN3_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN4_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN5_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN6_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN7_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN8_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN9_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN10_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN11_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN12_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN13_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN14_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN15_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN16_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN17_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN18_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN19_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN20_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN21_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN22_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN23_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN24_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN25_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN26_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN27_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN28_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN29_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN30_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN31_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN32_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN33_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN34_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN35_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN36_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN37_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN38_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN39_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN40_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN41_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN42_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN43_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN44_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN45_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN46_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN47_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN48_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN49_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN50_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN51_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN52_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN53_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN54_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN55_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN56_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN57_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN58_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN59_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN60_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN61_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN62_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN63_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN64_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN65_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN66_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN67_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN68_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN69_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN70_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN71_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN72_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN73_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN74_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN75_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN76_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN77_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN78_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN79_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN80_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN81_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN82_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN83_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN84_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN85_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN86_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN87_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN88_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN89_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN90_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN91_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN92_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN93_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN94_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN95_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN96_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN97_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN98_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN99_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN100_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN101_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN102_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN103_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN104_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN105_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN106_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN107_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN108_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN109_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN110_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN111_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN112_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN113_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN114_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN115_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN116_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN117_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN118_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN119_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN120_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN121_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN122_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN123_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN124_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN125_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN126_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="IN127_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="dout_width" VALUE="32"/>
+        <PARAMETER NAME="NUM_PORTS" VALUE="2"/>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_xlconcat_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="3" NAME="In0" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlslice_0" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="27" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="ShiftLeft2d26_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="ShiftLeft2d26_0" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconcat_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="Mux2_2" PORT="B"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="7" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x0"/>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_xlconstant_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="alu_0" PORT="Carryin"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="2" FULLNAME="/xlslice_0" HWVERSION="1.0" INSTANCE="xlslice_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlslice" VLNV="xilinx.com:ip:xlslice:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="DIN_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="DIN_FROM" VALUE="31"/>
+        <PARAMETER NAME="DIN_TO" VALUE="28"/>
+        <PARAMETER NAME="Component_Name" VALUE="Datapath_xlslice_0_0"/>
+        <PARAMETER NAME="DOUT_WIDTH" VALUE="4"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="Din" RIGHT="0" SIGIS="undef" SIGNAME="PCADD_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="PCADD_0" PORT="Dout"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="Dout" RIGHT="0" SIGIS="undef" SIGNAME="xlslice_0_Dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="xlconcat_0" PORT="In0"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

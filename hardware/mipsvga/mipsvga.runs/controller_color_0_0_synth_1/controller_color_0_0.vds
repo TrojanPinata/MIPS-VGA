@@ -1,0 +1,273 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Mar 17 18:20:29 2023
+# Process ID: 4808
+# Current directory: F:/projects/vga/hardware/mipsvga/mipsvga.runs/controller_color_0_0_synth_1
+# Command line: vivado.exe -log controller_color_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source controller_color_0_0.tcl
+# Log file: F:/projects/vga/hardware/mipsvga/mipsvga.runs/controller_color_0_0_synth_1/controller_color_0_0.vds
+# Journal file: F:/projects/vga/hardware/mipsvga/mipsvga.runs/controller_color_0_0_synth_1\vivado.jou
+# Running On: EVA-01, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 12, Host memory: 34282 MB
+#-----------------------------------------------------------
+source controller_color_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 383.180 ; gain = 57.586
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'F:/xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: controller_color_0_0
+Command: synth_design -top controller_color_0_0 -part xc7a35tcpg236-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20376
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [F:/xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 831.078 ; gain = 409.668
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'controller_color_0_0' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/controller/ip/controller_color_0_0/synth/controller_color_0_0.vhd:68]
+INFO: [Synth 8-3491] module 'color' declared at 'F:/projects/vga/hardware/color.vhd:5' bound to instance 'U0' of component 'color' [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/controller/ip/controller_color_0_0/synth/controller_color_0_0.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'color' [F:/projects/vga/hardware/color.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'color' (0#1) [F:/projects/vga/hardware/color.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'controller_color_0_0' (0#1) [f:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/controller/ip/controller_color_0_0/synth/controller_color_0_0.vhd:68]
+WARNING: [Synth 8-6014] Unused sequential element count_reg was removed.  [F:/projects/vga/hardware/color.vhd:24]
+WARNING: [Synth 8-6014] Unused sequential element addr_reg was removed.  [F:/projects/vga/hardware/color.vhd:26]
+WARNING: [Synth 8-3848] Net memaddr in module/entity color does not have driver. [F:/projects/vga/hardware/color.vhd:7]
+WARNING: [Synth 8-7129] Port memaddr[31] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[30] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[29] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[28] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[27] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[26] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[25] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[24] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[23] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[22] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[21] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[20] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[19] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[18] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[17] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[16] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[15] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[14] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[13] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[12] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[11] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[10] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[9] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[8] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[7] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[6] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[5] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[4] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[3] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[2] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[1] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[0] in module color is either unconnected or has no load
+WARNING: [Synth 8-7129] Port displaytoggle in module color is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 921.547 ; gain = 500.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 921.547 ; gain = 500.137
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 921.547 ; gain = 500.137
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 921.547 ; gain = 500.137
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   31 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port memaddr[31] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[30] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[29] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[28] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[27] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[26] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[25] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[24] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[23] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[22] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[21] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[20] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[19] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[18] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[17] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[16] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[15] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[14] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[13] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[12] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[11] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[10] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[9] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[8] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[7] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[6] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[5] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[4] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[3] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[2] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[1] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port memaddr[0] in module controller_color_0_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port displaytoggle in module controller_color_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1106.066 ; gain = 684.656
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1110.512 ; gain = 689.102
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1110.723 ; gain = 689.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1110.723 ; gain = 689.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1110.723 ; gain = 689.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1110.723 ; gain = 689.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1110.723 ; gain = 689.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1110.723 ; gain = 689.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1110.723 ; gain = 689.312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     3|
+|2     |LUT1   |     6|
+|3     |LUT3   |    17|
+|4     |LUT5   |     1|
+|5     |LUT6   |     1|
+|6     |MUXF7  |     8|
+|7     |MUXF8  |     4|
+|8     |FDRE   |     5|
+|9     |FDSE   |     1|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    46|
+|2     |  U0     |color  |    46|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1110.723 ; gain = 689.312
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 70 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1110.723 ; gain = 689.312
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1110.723 ; gain = 689.312
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1122.617 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1215.082 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: ab52a44b
+INFO: [Common 17-83] Releasing license: Synthesis
+23 Infos, 70 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1215.082 ; gain = 801.383
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Common 17-1381] The checkpoint 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/controller_color_0_0_synth_1/controller_color_0_0.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1518.887 ; gain = 303.805
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP controller_color_0_0, cache-ID = 6826c17b19fadade
+INFO: [Common 17-1381] The checkpoint 'F:/projects/vga/hardware/mipsvga/mipsvga.runs/controller_color_0_0_synth_1/controller_color_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file controller_color_0_0_utilization_synth.rpt -pb controller_color_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 17 18:21:09 2023...

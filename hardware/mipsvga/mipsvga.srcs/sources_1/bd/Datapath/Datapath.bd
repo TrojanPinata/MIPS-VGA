@@ -1,0 +1,1012 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x888BC0362A72C3E6",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../mipsvga.gen/sources_1/bd/Datapath",
+      "name": "Datapath",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "PC_0": "",
+      "Control_0": "",
+      "PCADD_0": "",
+      "Mux2d5_0": "",
+      "SignExtend_0": "",
+      "Mux2_0": "",
+      "xlconstant_0": "",
+      "ander_0": "",
+      "ShiftLeft2d26_0": "",
+      "ShiftLeft2_0": "",
+      "add_0": "",
+      "xlconcat_0": "",
+      "xlslice_0": "",
+      "Mux2_1": "",
+      "Mux2_2": "",
+      "Mux2_3": "",
+      "regfile_0": "",
+      "ALUControl_0": "",
+      "slicer_0": "",
+      "alu_0": "",
+      "instmem_0": "",
+      "datamem_0": ""
+    },
+    "ports": {
+      "Reset": {
+        "direction": "I"
+      },
+      "memaddr": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "memread": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "Zero": {
+        "direction": "O"
+      },
+      "Overflow": {
+        "direction": "O"
+      },
+      "Carryout": {
+        "direction": "O"
+      },
+      "clock": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "PC_0": {
+        "vlnv": "xilinx.com:module_ref:PC:1.0",
+        "xci_name": "Datapath_PC_0_0",
+        "xci_path": "ip\\Datapath_PC_0_0\\Datapath_PC_0_0.xci",
+        "inst_hier_path": "PC_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PC",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "clock": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "Reset",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "Datapath_clock",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "Reset": {
+            "type": "rst",
+            "direction": "I"
+          }
+        }
+      },
+      "Control_0": {
+        "vlnv": "xilinx.com:module_ref:Control:1.0",
+        "xci_name": "Datapath_Control_0_0",
+        "xci_path": "ip\\Datapath_Control_0_0\\Datapath_Control_0_0.xci",
+        "inst_hier_path": "Control_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Control",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Op": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "RegDst": {
+            "direction": "O"
+          },
+          "MemRead": {
+            "direction": "O"
+          },
+          "MemtoReg": {
+            "direction": "O"
+          },
+          "MemWrite": {
+            "direction": "O"
+          },
+          "ALUSrc": {
+            "direction": "O"
+          },
+          "RegWrite": {
+            "direction": "O"
+          },
+          "Branch": {
+            "direction": "O"
+          },
+          "Jump": {
+            "direction": "O"
+          },
+          "ALUOp": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "PCADD_0": {
+        "vlnv": "xilinx.com:module_ref:PCADD:1.0",
+        "xci_name": "Datapath_PCADD_0_0",
+        "xci_path": "ip\\Datapath_PCADD_0_0\\Datapath_PCADD_0_0.xci",
+        "inst_hier_path": "PCADD_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "PCADD",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Mux2d5_0": {
+        "vlnv": "xilinx.com:module_ref:Mux2d5:1.0",
+        "xci_name": "Datapath_Mux2d5_0_0",
+        "xci_path": "ip\\Datapath_Mux2d5_0_0\\Datapath_Mux2d5_0_0.xci",
+        "inst_hier_path": "Mux2d5_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mux2d5",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "B": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "Sel": {
+            "direction": "I"
+          },
+          "Dout": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          }
+        }
+      },
+      "SignExtend_0": {
+        "vlnv": "xilinx.com:module_ref:SignExtend:1.0",
+        "xci_name": "Datapath_SignExtend_0_0",
+        "xci_path": "ip\\Datapath_SignExtend_0_0\\Datapath_SignExtend_0_0.xci",
+        "inst_hier_path": "SignExtend_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "SignExtend",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Din": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "Dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Mux2_0": {
+        "vlnv": "xilinx.com:module_ref:Mux2:1.0",
+        "xci_name": "Datapath_Mux2_0_0",
+        "xci_path": "ip\\Datapath_Mux2_0_0\\Datapath_Mux2_0_0.xci",
+        "inst_hier_path": "Mux2_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mux2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "B": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Sel": {
+            "direction": "I"
+          },
+          "Dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "Datapath_xlconstant_0_0",
+        "xci_path": "ip\\Datapath_xlconstant_0_0\\Datapath_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          }
+        }
+      },
+      "ander_0": {
+        "vlnv": "xilinx.com:module_ref:ander:1.0",
+        "xci_name": "Datapath_ander_0_0",
+        "xci_path": "ip\\Datapath_ander_0_0\\Datapath_ander_0_0.xci",
+        "inst_hier_path": "ander_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ander",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I"
+          },
+          "B": {
+            "direction": "I"
+          },
+          "Dout": {
+            "direction": "O"
+          }
+        }
+      },
+      "ShiftLeft2d26_0": {
+        "vlnv": "xilinx.com:module_ref:ShiftLeft2d26:1.0",
+        "xci_name": "Datapath_ShiftLeft2d26_0_0",
+        "xci_path": "ip\\Datapath_ShiftLeft2d26_0_0\\Datapath_ShiftLeft2d26_0_0.xci",
+        "inst_hier_path": "ShiftLeft2d26_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ShiftLeft2d26",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Din": {
+            "direction": "I",
+            "left": "25",
+            "right": "0"
+          },
+          "Dout": {
+            "direction": "O",
+            "left": "27",
+            "right": "0"
+          }
+        }
+      },
+      "ShiftLeft2_0": {
+        "vlnv": "xilinx.com:module_ref:ShiftLeft2:1.0",
+        "xci_name": "Datapath_ShiftLeft2_0_0",
+        "xci_path": "ip\\Datapath_ShiftLeft2_0_0\\Datapath_ShiftLeft2_0_0.xci",
+        "inst_hier_path": "ShiftLeft2_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ShiftLeft2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "Din": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "add_0": {
+        "vlnv": "xilinx.com:module_ref:add:1.0",
+        "xci_name": "Datapath_add_0_0",
+        "xci_path": "ip\\Datapath_add_0_0\\Datapath_add_0_0.xci",
+        "inst_hier_path": "add_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "add",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "B": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ALUout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "xlconcat_0": {
+        "vlnv": "xilinx.com:ip:xlconcat:2.1",
+        "xci_name": "Datapath_xlconcat_0_0",
+        "xci_path": "ip\\Datapath_xlconcat_0_0\\Datapath_xlconcat_0_0.xci",
+        "inst_hier_path": "xlconcat_0"
+      },
+      "xlslice_0": {
+        "vlnv": "xilinx.com:ip:xlslice:1.0",
+        "xci_name": "Datapath_xlslice_0_0",
+        "xci_path": "ip\\Datapath_xlslice_0_0\\Datapath_xlslice_0_0.xci",
+        "inst_hier_path": "xlslice_0",
+        "parameters": {
+          "DIN_FROM": {
+            "value": "31"
+          },
+          "DIN_TO": {
+            "value": "28"
+          }
+        }
+      },
+      "Mux2_1": {
+        "vlnv": "xilinx.com:module_ref:Mux2:1.0",
+        "xci_name": "Datapath_Mux2_1_0",
+        "xci_path": "ip\\Datapath_Mux2_1_0\\Datapath_Mux2_1_0.xci",
+        "inst_hier_path": "Mux2_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mux2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "B": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Sel": {
+            "direction": "I"
+          },
+          "Dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Mux2_2": {
+        "vlnv": "xilinx.com:module_ref:Mux2:1.0",
+        "xci_name": "Datapath_Mux2_2_0",
+        "xci_path": "ip\\Datapath_Mux2_2_0\\Datapath_Mux2_2_0.xci",
+        "inst_hier_path": "Mux2_2",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mux2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "B": {
+            "direction": "I",
+            "left": "31",
+            "right": "0",
+            "parameters": {
+              "PortWidth": {
+                "value": "32",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "Sel": {
+            "direction": "I"
+          },
+          "Dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "Mux2_3": {
+        "vlnv": "xilinx.com:module_ref:Mux2:1.0",
+        "xci_name": "Datapath_Mux2_3_0",
+        "xci_path": "ip\\Datapath_Mux2_3_0\\Datapath_Mux2_3_0.xci",
+        "inst_hier_path": "Mux2_3",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Mux2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "B": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Sel": {
+            "direction": "I"
+          },
+          "Dout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "regfile_0": {
+        "vlnv": "xilinx.com:module_ref:regfile:1.0",
+        "xci_name": "Datapath_regfile_0_0",
+        "xci_path": "ip\\Datapath_regfile_0_0\\Datapath_regfile_0_0.xci",
+        "inst_hier_path": "regfile_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "regfile",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clock": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "RegWrite": {
+            "direction": "I"
+          },
+          "read_reg1": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "read_reg2": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "write_reg": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "write_data": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "read_data1": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "read_data2": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "ALUControl_0": {
+        "vlnv": "xilinx.com:module_ref:ALUControl:1.0",
+        "xci_name": "Datapath_ALUControl_0_0",
+        "xci_path": "ip\\Datapath_ALUControl_0_0\\Datapath_ALUControl_0_0.xci",
+        "inst_hier_path": "ALUControl_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ALUControl",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "funct": {
+            "direction": "I",
+            "left": "5",
+            "right": "0"
+          },
+          "Op": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "ALUCntl": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      },
+      "slicer_0": {
+        "vlnv": "xilinx.com:module_ref:slicer:1.0",
+        "xci_name": "Datapath_slicer_0_0",
+        "xci_path": "ip\\Datapath_slicer_0_0\\Datapath_slicer_0_0.xci",
+        "inst_hier_path": "slicer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "slicer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "instruction": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "opcode": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          },
+          "funct": {
+            "direction": "O",
+            "left": "5",
+            "right": "0"
+          },
+          "rs": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rt": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "rd": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
+          "immediate": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "jump": {
+            "direction": "O",
+            "left": "25",
+            "right": "0"
+          }
+        }
+      },
+      "alu_0": {
+        "vlnv": "xilinx.com:module_ref:alu:1.0",
+        "xci_name": "Datapath_alu_0_0",
+        "xci_path": "ip\\Datapath_alu_0_0\\Datapath_alu_0_0.xci",
+        "inst_hier_path": "alu_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "alu",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "A": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "B": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "Carryin": {
+            "direction": "I"
+          },
+          "ALUCntl": {
+            "direction": "I",
+            "left": "3",
+            "right": "0"
+          },
+          "ALUout": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "Zero": {
+            "direction": "O"
+          },
+          "Overflow": {
+            "direction": "O"
+          },
+          "Carryout": {
+            "direction": "O"
+          }
+        }
+      },
+      "instmem_0": {
+        "vlnv": "xilinx.com:module_ref:instmem:1.0",
+        "xci_name": "Datapath_instmem_0_0",
+        "xci_path": "ip\\Datapath_instmem_0_0\\Datapath_instmem_0_0.xci",
+        "inst_hier_path": "instmem_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "instmem",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "read_inst": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "inst_out": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "datamem_0": {
+        "vlnv": "xilinx.com:module_ref:datamem:1.0",
+        "xci_name": "Datapath_datamem_0_0",
+        "xci_path": "ip\\Datapath_datamem_0_0\\Datapath_datamem_0_0.xci",
+        "inst_hier_path": "datamem_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "datamem",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clock": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "address": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ext_addr": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "write_data": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "MemWrite": {
+            "direction": "I"
+          },
+          "MemRead": {
+            "direction": "I"
+          },
+          "Read_data": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "ext_read": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "ALUControl_0_ALUCntl": {
+        "ports": [
+          "ALUControl_0/ALUCntl",
+          "alu_0/ALUCntl"
+        ]
+      },
+      "Control_0_ALUOp": {
+        "ports": [
+          "Control_0/ALUOp",
+          "ALUControl_0/Op"
+        ]
+      },
+      "Control_0_ALUSrc": {
+        "ports": [
+          "Control_0/ALUSrc",
+          "Mux2_0/Sel"
+        ]
+      },
+      "Control_0_Branch": {
+        "ports": [
+          "Control_0/Branch",
+          "ander_0/A"
+        ]
+      },
+      "Control_0_Jump": {
+        "ports": [
+          "Control_0/Jump",
+          "Mux2_2/Sel"
+        ]
+      },
+      "Control_0_MemRead": {
+        "ports": [
+          "Control_0/MemRead",
+          "datamem_0/MemRead"
+        ]
+      },
+      "Control_0_MemWrite": {
+        "ports": [
+          "Control_0/MemWrite",
+          "datamem_0/MemWrite"
+        ]
+      },
+      "Control_0_MemtoReg": {
+        "ports": [
+          "Control_0/MemtoReg",
+          "Mux2_3/Sel"
+        ]
+      },
+      "Control_0_RegDst": {
+        "ports": [
+          "Control_0/RegDst",
+          "Mux2d5_0/Sel"
+        ]
+      },
+      "Control_0_RegWrite": {
+        "ports": [
+          "Control_0/RegWrite",
+          "regfile_0/RegWrite"
+        ]
+      },
+      "Mux2_0_Dout": {
+        "ports": [
+          "Mux2_0/Dout",
+          "alu_0/B"
+        ]
+      },
+      "Mux2_1_Dout": {
+        "ports": [
+          "Mux2_1/Dout",
+          "Mux2_2/A"
+        ]
+      },
+      "Mux2_2_Dout": {
+        "ports": [
+          "Mux2_2/Dout",
+          "PC_0/Din"
+        ]
+      },
+      "Mux2_3_Dout": {
+        "ports": [
+          "Mux2_3/Dout",
+          "regfile_0/write_data"
+        ]
+      },
+      "Mux2d5_0_Dout": {
+        "ports": [
+          "Mux2d5_0/Dout",
+          "regfile_0/write_reg"
+        ]
+      },
+      "PCADD_0_Dout": {
+        "ports": [
+          "PCADD_0/Dout",
+          "xlslice_0/Din",
+          "Mux2_1/A",
+          "add_0/A"
+        ]
+      },
+      "PC_0_Dout": {
+        "ports": [
+          "PC_0/Dout",
+          "PCADD_0/Din",
+          "instmem_0/read_inst"
+        ]
+      },
+      "Reset_1": {
+        "ports": [
+          "Reset",
+          "PC_0/Reset"
+        ]
+      },
+      "ShiftLeft2_0_Dout": {
+        "ports": [
+          "ShiftLeft2_0/Dout",
+          "add_0/B"
+        ]
+      },
+      "ShiftLeft2d26_0_Dout": {
+        "ports": [
+          "ShiftLeft2d26_0/Dout",
+          "xlconcat_0/In1"
+        ]
+      },
+      "SignExtend_0_Dout": {
+        "ports": [
+          "SignExtend_0/Dout",
+          "Mux2_0/B",
+          "ShiftLeft2_0/Din"
+        ]
+      },
+      "add_0_ALUout": {
+        "ports": [
+          "add_0/ALUout",
+          "Mux2_1/B"
+        ]
+      },
+      "alu_0_ALUout": {
+        "ports": [
+          "alu_0/ALUout",
+          "Mux2_3/A",
+          "datamem_0/address"
+        ]
+      },
+      "alu_0_Carryout": {
+        "ports": [
+          "alu_0/Carryout",
+          "Carryout"
+        ]
+      },
+      "alu_0_Overflow": {
+        "ports": [
+          "alu_0/Overflow",
+          "Overflow"
+        ]
+      },
+      "alu_0_Zero": {
+        "ports": [
+          "alu_0/Zero",
+          "Zero",
+          "ander_0/B"
+        ]
+      },
+      "ander_0_Dout": {
+        "ports": [
+          "ander_0/Dout",
+          "Mux2_1/Sel"
+        ]
+      },
+      "clock_1": {
+        "ports": [
+          "clock",
+          "PC_0/clock",
+          "regfile_0/clock",
+          "datamem_0/clock"
+        ]
+      },
+      "datamem_0_Read_data": {
+        "ports": [
+          "datamem_0/Read_data",
+          "Mux2_3/B"
+        ]
+      },
+      "datamem_0_ext_read": {
+        "ports": [
+          "datamem_0/ext_read",
+          "memread"
+        ]
+      },
+      "instmem_0_inst_out": {
+        "ports": [
+          "instmem_0/inst_out",
+          "slicer_0/instruction"
+        ]
+      },
+      "memaddr_1": {
+        "ports": [
+          "memaddr",
+          "datamem_0/ext_addr"
+        ]
+      },
+      "regfile_0_read_data1": {
+        "ports": [
+          "regfile_0/read_data1",
+          "alu_0/A"
+        ]
+      },
+      "regfile_0_read_data2": {
+        "ports": [
+          "regfile_0/read_data2",
+          "Mux2_0/A",
+          "datamem_0/write_data"
+        ]
+      },
+      "slicer_0_funct": {
+        "ports": [
+          "slicer_0/funct",
+          "ALUControl_0/funct"
+        ]
+      },
+      "slicer_0_immediate": {
+        "ports": [
+          "slicer_0/immediate",
+          "SignExtend_0/Din"
+        ]
+      },
+      "slicer_0_jump": {
+        "ports": [
+          "slicer_0/jump",
+          "ShiftLeft2d26_0/Din"
+        ]
+      },
+      "slicer_0_opcode": {
+        "ports": [
+          "slicer_0/opcode",
+          "Control_0/Op"
+        ]
+      },
+      "slicer_0_rd": {
+        "ports": [
+          "slicer_0/rd",
+          "Mux2d5_0/B"
+        ]
+      },
+      "slicer_0_rs": {
+        "ports": [
+          "slicer_0/rs",
+          "regfile_0/read_reg1"
+        ]
+      },
+      "slicer_0_rt": {
+        "ports": [
+          "slicer_0/rt",
+          "Mux2d5_0/A",
+          "regfile_0/read_reg2"
+        ]
+      },
+      "xlconcat_0_dout": {
+        "ports": [
+          "xlconcat_0/dout",
+          "Mux2_2/B"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "alu_0/Carryin"
+        ]
+      },
+      "xlslice_0_Dout": {
+        "ports": [
+          "xlslice_0/Dout",
+          "xlconcat_0/In0"
+        ]
+      }
+    }
+  }
+}

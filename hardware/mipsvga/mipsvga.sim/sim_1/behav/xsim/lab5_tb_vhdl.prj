@@ -1,0 +1,43 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../PC.vhd" \
+"../../../../../Control.vhd" \
+"../../../../../PCADD.vhd" \
+"../../../../../Mux2d5.vhd" \
+"../../../../../SignExtend.vhd" \
+"../../../../../Mux2.vhd" \
+"../../../../../ander.vhd" \
+"../../../../../ShiftLeft2d26.vhd" \
+"../../../../../ShiftLeft2.vhd" \
+"../../../../../add.vhd" \
+"../../../../../regfile.vhd" \
+"../../../../../datamem.vhd" \
+"../../../../../instmem.vhd" \
+"../../../../../ALUControl.vhd" \
+"../../../../../slicer.vhd" \
+"../../../../../alu.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_PC_0_0/sim/Datapath_PC_0_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_Control_0_0/sim/Datapath_Control_0_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_PCADD_0_0/sim/Datapath_PCADD_0_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_Mux2d5_0_0/sim/Datapath_Mux2d5_0_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_SignExtend_0_0/sim/Datapath_SignExtend_0_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_Mux2_0_0/sim/Datapath_Mux2_0_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_ander_0_0/sim/Datapath_ander_0_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_ShiftLeft2d26_0_0/sim/Datapath_ShiftLeft2d26_0_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_ShiftLeft2_0_0/sim/Datapath_ShiftLeft2_0_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_add_0_0/sim/Datapath_add_0_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_Mux2_1_0/sim/Datapath_Mux2_1_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_Mux2_2_0/sim/Datapath_Mux2_2_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_Mux2_3_0/sim/Datapath_Mux2_3_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_regfile_0_0/sim/Datapath_regfile_0_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_datamem_0_0/sim/Datapath_datamem_0_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_instmem_0_0/sim/Datapath_instmem_0_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_ALUControl_0_0/sim/Datapath_ALUControl_0_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_slicer_0_0/sim/Datapath_slicer_0_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/ip/Datapath_alu_0_0/sim/Datapath_alu_0_0.vhd" \
+"../../../../mipsvga.ip_user_files/bd/Datapath/sim/Datapath.vhd" \
+"../../../../mipsvga.gen/sources_1/bd/Datapath/hdl/Datapath_wrapper.vhd" \
+"../../../../../lab5_tb.vhd" \
+
+# Do not sort compile order
+nosort

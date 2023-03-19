@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="TopLevel_controller_wrapper_0_0_synth_1" LaunchDir="F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_controller_wrapper_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="controller_hcount_0_0_synth_1"/>
+		<Parent Id="controller_vcount_0_0_synth_1"/>
+		<Parent Id="controller_color_0_0_synth_1"/>
+		<Parent Id="controller_comparator_0_0_synth_1"/>
+	</Run>
+	<Run Id="TopLevel_Datapath_wrapper_0_0_synth_1" LaunchDir="F:/projects/vga/hardware/mipsvga/mipsvga.runs/TopLevel_Datapath_wrapper_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="Datapath_datamem_0_0_synth_1"/>
+	</Run>
+	<Run Id="controller_hcount_0_0_synth_1" LaunchDir="F:/projects/vga/hardware/mipsvga/mipsvga.runs/controller_hcount_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="controller_vcount_0_0_synth_1" LaunchDir="F:/projects/vga/hardware/mipsvga/mipsvga.runs/controller_vcount_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="Datapath_datamem_0_0_synth_1" LaunchDir="F:/projects/vga/hardware/mipsvga/mipsvga.runs/Datapath_datamem_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="controller_color_0_0_synth_1" LaunchDir="F:/projects/vga/hardware/mipsvga/mipsvga.runs/controller_color_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="controller_comparator_0_0_synth_1" LaunchDir="F:/projects/vga/hardware/mipsvga/mipsvga.runs/controller_comparator_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="F:/projects/vga/hardware/mipsvga/mipsvga.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="TopLevel_controller_wrapper_0_0_synth_1"/>
+		<Parent Id="TopLevel_Datapath_wrapper_0_0_synth_1"/>
+		<Parent Id="controller_hcount_0_0_synth_1"/>
+		<Parent Id="controller_vcount_0_0_synth_1"/>
+		<Parent Id="Datapath_datamem_0_0_synth_1"/>
+		<Parent Id="controller_color_0_0_synth_1"/>
+		<Parent Id="controller_comparator_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="F:/projects/vga/hardware/mipsvga/mipsvga.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="TopLevel_controller_wrapper_0_0_synth_1"/>
+		<Parent Id="TopLevel_Datapath_wrapper_0_0_synth_1"/>
+		<Parent Id="controller_hcount_0_0_synth_1"/>
+		<Parent Id="controller_vcount_0_0_synth_1"/>
+		<Parent Id="Datapath_datamem_0_0_synth_1"/>
+		<Parent Id="controller_color_0_0_synth_1"/>
+		<Parent Id="controller_comparator_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

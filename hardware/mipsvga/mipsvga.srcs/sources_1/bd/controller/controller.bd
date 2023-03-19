@@ -1,0 +1,273 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xFC0C522EA2AA3687",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../mipsvga.gen/sources_1/bd/controller",
+      "name": "controller",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "color_0": "",
+      "hcount_0": "",
+      "vcount_0": "",
+      "comparator_0": "",
+      "clockdivider_0": ""
+    },
+    "ports": {
+      "vsync": {
+        "direction": "O"
+      },
+      "hsync": {
+        "direction": "O"
+      },
+      "memdata": {
+        "direction": "I",
+        "left": "31",
+        "right": "0"
+      },
+      "memaddr": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      },
+      "vgaRed": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "vgaGreen": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "vgaBlue": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "clock": {
+        "direction": "I"
+      }
+    },
+    "components": {
+      "color_0": {
+        "vlnv": "xilinx.com:module_ref:color:1.0",
+        "xci_name": "controller_color_0_0",
+        "xci_path": "ip\\controller_color_0_0\\controller_color_0_0.xci",
+        "inst_hier_path": "color_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "color",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "memaddr": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "vgaRed": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "vgaGreen": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "vgaBlue": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "pxclock": {
+            "direction": "I"
+          },
+          "displaytoggle": {
+            "direction": "I"
+          }
+        }
+      },
+      "hcount_0": {
+        "vlnv": "xilinx.com:module_ref:hcount:1.0",
+        "xci_name": "controller_hcount_0_0",
+        "xci_path": "ip\\controller_hcount_0_0\\controller_hcount_0_0.xci",
+        "inst_hier_path": "hcount_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "hcount",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "hsync": {
+            "direction": "O"
+          },
+          "pxclock": {
+            "direction": "I"
+          }
+        }
+      },
+      "vcount_0": {
+        "vlnv": "xilinx.com:module_ref:vcount:1.0",
+        "xci_name": "controller_vcount_0_0",
+        "xci_path": "ip\\controller_vcount_0_0\\controller_vcount_0_0.xci",
+        "inst_hier_path": "vcount_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "vcount",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data": {
+            "direction": "O",
+            "left": "19",
+            "right": "0"
+          },
+          "vsync": {
+            "direction": "O"
+          },
+          "pxclock": {
+            "direction": "I"
+          }
+        }
+      },
+      "comparator_0": {
+        "vlnv": "xilinx.com:module_ref:comparator:1.0",
+        "xci_name": "controller_comparator_0_0",
+        "xci_path": "ip\\controller_comparator_0_0\\controller_comparator_0_0.xci",
+        "inst_hier_path": "comparator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "comparator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "vcount": {
+            "direction": "I",
+            "left": "19",
+            "right": "0"
+          },
+          "hcount": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "displaytoggle": {
+            "direction": "O"
+          }
+        }
+      },
+      "clockdivider_0": {
+        "vlnv": "xilinx.com:module_ref:clockdivider:1.0",
+        "xci_name": "controller_clockdivider_0_0",
+        "xci_path": "ip\\controller_clockdivider_0_0\\controller_clockdivider_0_0.xci",
+        "inst_hier_path": "clockdivider_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clockdivider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clock": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "pxclock": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clock_1": {
+        "ports": [
+          "clock",
+          "clockdivider_0/clock"
+        ]
+      },
+      "color_0_memaddr": {
+        "ports": [
+          "color_0/memaddr",
+          "memaddr"
+        ]
+      },
+      "color_0_vgaBlue": {
+        "ports": [
+          "color_0/vgaBlue",
+          "vgaBlue"
+        ]
+      },
+      "color_0_vgaGreen": {
+        "ports": [
+          "color_0/vgaGreen",
+          "vgaGreen"
+        ]
+      },
+      "color_0_vgaRed": {
+        "ports": [
+          "color_0/vgaRed",
+          "vgaRed"
+        ]
+      },
+      "comparator_0_displaytoggle": {
+        "ports": [
+          "comparator_0/displaytoggle",
+          "color_0/displaytoggle"
+        ]
+      },
+      "hcount_0_data": {
+        "ports": [
+          "hcount_0/data",
+          "comparator_0/hcount"
+        ]
+      },
+      "hcount_0_hsync": {
+        "ports": [
+          "hcount_0/hsync",
+          "hsync"
+        ]
+      },
+      "memdata_1": {
+        "ports": [
+          "memdata",
+          "color_0/data"
+        ]
+      },
+      "pixelclock_1": {
+        "ports": [
+          "clockdivider_0/pxclock",
+          "color_0/pxclock",
+          "hcount_0/pxclock",
+          "vcount_0/pxclock"
+        ]
+      },
+      "vcount_0_data": {
+        "ports": [
+          "vcount_0/data",
+          "comparator_0/vcount"
+        ]
+      },
+      "vcount_0_vsync": {
+        "ports": [
+          "vcount_0/vsync",
+          "vsync"
+        ]
+      }
+    }
+  }
+}

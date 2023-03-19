@@ -1,0 +1,36 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-691,-238",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -10 -y 90 -defaultsOSRD
+preplace port port-id_Hsync -pg 1 -lvl 2 -x 370 -y 220 -defaultsOSRD
+preplace port port-id_Vsync -pg 1 -lvl 2 -x 370 -y 320 -defaultsOSRD
+preplace port port-id_reset -pg 1 -lvl 0 -x -10 -y 70 -defaultsOSRD
+preplace port port-id_Carryout -pg 1 -lvl 2 -x 370 -y 60 -defaultsOSRD
+preplace port port-id_Zero -pg 1 -lvl 2 -x 370 -y 100 -defaultsOSRD
+preplace port port-id_Overflow -pg 1 -lvl 2 -x 370 -y 80 -defaultsOSRD
+preplace portBus vgaRed -pg 1 -lvl 2 -x 370 -y 300 -defaultsOSRD
+preplace portBus vgaGreen -pg 1 -lvl 2 -x 370 -y 280 -defaultsOSRD
+preplace portBus vgaBlue -pg 1 -lvl 2 -x 370 -y 260 -defaultsOSRD
+preplace inst controller_wrapper_0 -pg 1 -lvl 1 -x 190 -y 270 -defaultsOSRD
+preplace inst Datapath_wrapper_0 -pg 1 -lvl 1 -x 190 -y 90 -defaultsOSRD
+preplace netloc Datapath_wrapper_0_Carryout 1 1 1 N 60
+preplace netloc Datapath_wrapper_0_Overflow 1 1 1 N 80
+preplace netloc Datapath_wrapper_0_Zero 1 1 1 N 100
+preplace netloc Datapath_wrapper_0_memread 1 0 2 30 380 350
+preplace netloc clock_1 1 0 1 10 90n
+preplace netloc controller_wrapper_0_hsync 1 1 1 N 220
+preplace netloc controller_wrapper_0_memaddr 1 0 2 20 390 340
+preplace netloc controller_wrapper_0_vgaBlue 1 1 1 N 260
+preplace netloc controller_wrapper_0_vgaGreen 1 1 1 N 280
+preplace netloc controller_wrapper_0_vgaRed 1 1 1 N 300
+preplace netloc controller_wrapper_0_vsync 1 1 1 N 320
+preplace netloc reset_1 1 0 1 N 70
+levelinfo -pg 1 -10 190 370
+pagesize -pg 1 -db -bbox -sgen -90 0 510 400
+"
+}
+0

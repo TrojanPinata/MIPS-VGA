@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Mar 17 21:15:20 2023" VIVADOVERSION="2022.2">
+
+  <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:basys3:part0:1.1" DEVICE="7a35t" NAME="controller" PACKAGE="cpg236" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT DIR="O" NAME="vsync" SIGIS="undef" SIGNAME="vcount_0_vsync">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="vcount_0" PORT="vsync"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="hsync" SIGIS="undef" SIGNAME="hcount_0_hsync">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="hcount_0" PORT="hsync"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="31" NAME="memdata" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_memdata">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="color_0" PORT="data"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="31" NAME="memaddr" RIGHT="0" SIGIS="undef" SIGNAME="color_0_memaddr">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="color_0" PORT="memaddr"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="vgaRed" RIGHT="0" SIGIS="undef" SIGNAME="color_0_vgaRed">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="color_0" PORT="vgaRed"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="vgaGreen" RIGHT="0" SIGIS="undef" SIGNAME="color_0_vgaGreen">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="color_0" PORT="vgaGreen"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="vgaBlue" RIGHT="0" SIGIS="undef" SIGNAME="color_0_vgaBlue">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="color_0" PORT="vgaBlue"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="clock" SIGIS="undef" SIGNAME="External_Ports_clock">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clockdivider_0" PORT="clock"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE COREREVISION="1" FULLNAME="/clockdivider_0" HWVERSION="1.0" INSTANCE="clockdivider_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clockdivider" VLNV="xilinx.com:module_ref:clockdivider:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="controller_clockdivider_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clock" SIGIS="clk" SIGNAME="External_Ports_clock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="clock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="pxclock" SIGIS="undef" SIGNAME="clockdivider_0_pxclock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="color_0" PORT="pxclock"/>
+            <CONNECTION INSTANCE="hcount_0" PORT="pxclock"/>
+            <CONNECTION INSTANCE="vcount_0" PORT="pxclock"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/color_0" HWVERSION="1.0" INSTANCE="color_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="color" VLNV="xilinx.com:module_ref:color:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="controller_color_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="31" NAME="data" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_memdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="memdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="memaddr" RIGHT="0" SIGIS="undef" SIGNAME="color_0_memaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="memaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="vgaRed" RIGHT="0" SIGIS="undef" SIGNAME="color_0_vgaRed">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="vgaRed"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="vgaGreen" RIGHT="0" SIGIS="undef" SIGNAME="color_0_vgaGreen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="vgaGreen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="vgaBlue" RIGHT="0" SIGIS="undef" SIGNAME="color_0_vgaBlue">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="vgaBlue"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxclock" SIGIS="undef" SIGNAME="clockdivider_0_pxclock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clockdivider_0" PORT="pxclock"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="displaytoggle" SIGIS="undef" SIGNAME="comparator_0_displaytoggle">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="comparator_0" PORT="displaytoggle"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/comparator_0" HWVERSION="1.0" INSTANCE="comparator_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="comparator" VLNV="xilinx.com:module_ref:comparator:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="controller_comparator_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" LEFT="19" NAME="vcount" RIGHT="0" SIGIS="undef" SIGNAME="vcount_0_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="vcount_0" PORT="data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="9" NAME="hcount" RIGHT="0" SIGIS="undef" SIGNAME="hcount_0_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="hcount_0" PORT="data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="displaytoggle" SIGIS="undef" SIGNAME="comparator_0_displaytoggle">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="color_0" PORT="displaytoggle"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/hcount_0" HWVERSION="1.0" INSTANCE="hcount_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="hcount" VLNV="xilinx.com:module_ref:hcount:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="controller_hcount_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="9" NAME="data" RIGHT="0" SIGIS="undef" SIGNAME="hcount_0_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="comparator_0" PORT="hcount"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="hsync" SIGIS="undef" SIGNAME="hcount_0_hsync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hsync"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxclock" SIGIS="undef" SIGNAME="clockdivider_0_pxclock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clockdivider_0" PORT="pxclock"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/vcount_0" HWVERSION="1.0" INSTANCE="vcount_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="vcount" VLNV="xilinx.com:module_ref:vcount:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="controller_vcount_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="19" NAME="data" RIGHT="0" SIGIS="undef" SIGNAME="vcount_0_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="comparator_0" PORT="vcount"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="vsync" SIGIS="undef" SIGNAME="vcount_0_vsync">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="vsync"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="pxclock" SIGIS="undef" SIGNAME="clockdivider_0_pxclock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clockdivider_0" PORT="pxclock"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

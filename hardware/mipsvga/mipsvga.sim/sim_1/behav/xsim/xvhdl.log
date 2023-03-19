@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "F:/projects/vga/hardware/datamem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'datamem'
+INFO: [VRFC 10-163] Analyzing VHDL file "F:/projects/vga/hardware/mipsvga/mipsvga.gen/sources_1/bd/Datapath/hdl/Datapath_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Datapath_wrapper'

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Mar 19 18:45:39 2023
+# Process ID: 15836
+# Current directory: F:/projects/vga/hardware/mipsvga/mipsvga.runs/impl_1
+# Command line: vivado.exe -log TopLevel_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source TopLevel_wrapper.tcl -notrace
+# Log file: F:/projects/vga/hardware/mipsvga/mipsvga.runs/impl_1/TopLevel_wrapper.vdi
+# Journal file: F:/projects/vga/hardware/mipsvga/mipsvga.runs/impl_1\vivado.jou
+# Running On: EVA-01, OS: Windows, CPU Frequency: 3600 MHz, CPU Physical cores: 12, Host memory: 34282 MB
+#-----------------------------------------------------------
+source TopLevel_wrapper.tcl -notrace

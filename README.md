@@ -1,2 +1,2 @@
 # MIPS-VGA
-A implementation of a MIPS processor connected directly to a VGA controller which reads from data memory.
+This is the project I did over my 2023 spring break. The intial goal was to display a video onto a VGA display using the VGA port of a ![Digilent Basys 3](https://digilent.com/reference/programmable-logic/basys-3/reference-manual). The Basys 3 has signaifigantly less space then I had initially expected, which reduced my goal to a single image. By the end of my break, my goal was reduced even further as one 640x480 image in binary color was too large. I could have reduced the image size, but I have run out of time and there are other things I need to do. 
