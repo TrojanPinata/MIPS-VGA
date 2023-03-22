@@ -1,0 +1,332 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x221D799F6B5CB457",
+      "device": "xc7a35tcpg236-1",
+      "gen_directory": "../../../../vgaimage.gen/sources_1/bd/Controller",
+      "name": "Controller",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "datamem_0": "",
+      "comparator_0": "",
+      "vcount_0": "",
+      "hcount_0": "",
+      "color_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "Controller_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "vgaRed": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "vgaGreen": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "vgaBlue": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "Hsync": {
+        "direction": "O"
+      },
+      "Vsync": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "datamem_0": {
+        "vlnv": "xilinx.com:module_ref:datamem:1.0",
+        "xci_name": "Controller_datamem_0_0",
+        "xci_path": "ip\\Controller_datamem_0_0\\Controller_datamem_0_0.xci",
+        "inst_hier_path": "datamem_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "datamem",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "ext_addr": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "ext_read": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "comparator_0": {
+        "vlnv": "xilinx.com:module_ref:comparator:1.0",
+        "xci_name": "Controller_comparator_0_0",
+        "xci_path": "ip\\Controller_comparator_0_0\\Controller_comparator_0_0.xci",
+        "inst_hier_path": "comparator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "comparator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "vcount": {
+            "direction": "I",
+            "left": "19",
+            "right": "0"
+          },
+          "hcount": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "displaytoggle": {
+            "direction": "O"
+          }
+        }
+      },
+      "vcount_0": {
+        "vlnv": "xilinx.com:module_ref:vcount:1.0",
+        "xci_name": "Controller_vcount_0_0",
+        "xci_path": "ip\\Controller_vcount_0_0\\Controller_vcount_0_0.xci",
+        "inst_hier_path": "vcount_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "vcount",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data": {
+            "direction": "O",
+            "left": "19",
+            "right": "0"
+          },
+          "vsync": {
+            "direction": "O"
+          },
+          "pxclock": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "Controller_clk",
+                "value_src": "default_prop"
+              }
+            }
+          }
+        }
+      },
+      "hcount_0": {
+        "vlnv": "xilinx.com:module_ref:hcount:1.0",
+        "xci_name": "Controller_hcount_0_0",
+        "xci_path": "ip\\Controller_hcount_0_0\\Controller_hcount_0_0.xci",
+        "inst_hier_path": "hcount_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "hcount",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "hsync": {
+            "direction": "O"
+          },
+          "pxclock": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "Controller_clk",
+                "value_src": "default_prop"
+              }
+            }
+          }
+        }
+      },
+      "color_0": {
+        "vlnv": "xilinx.com:module_ref:color:1.0",
+        "xci_name": "Controller_color_0_0",
+        "xci_path": "ip\\Controller_color_0_0\\Controller_color_0_0.xci",
+        "inst_hier_path": "color_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "color",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "data": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "memaddr": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "vgaRed": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "vgaGreen": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "vgaBlue": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          },
+          "pxclock": {
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "user_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "Controller_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "displaytoggle": {
+            "direction": "I"
+          },
+          "hsync": {
+            "direction": "I"
+          },
+          "vsync": {
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Net": {
+        "ports": [
+          "clk",
+          "vcount_0/pxclock",
+          "hcount_0/pxclock",
+          "color_0/pxclock"
+        ]
+      },
+      "color_0_memaddr": {
+        "ports": [
+          "color_0/memaddr",
+          "datamem_0/ext_addr"
+        ]
+      },
+      "color_0_vgaBlue": {
+        "ports": [
+          "color_0/vgaBlue",
+          "vgaBlue"
+        ]
+      },
+      "color_0_vgaGreen": {
+        "ports": [
+          "color_0/vgaGreen",
+          "vgaGreen"
+        ]
+      },
+      "color_0_vgaRed": {
+        "ports": [
+          "color_0/vgaRed",
+          "vgaRed"
+        ]
+      },
+      "comparator_0_displaytoggle": {
+        "ports": [
+          "comparator_0/displaytoggle",
+          "color_0/displaytoggle"
+        ]
+      },
+      "datamem_0_ext_read": {
+        "ports": [
+          "datamem_0/ext_read",
+          "color_0/data"
+        ]
+      },
+      "hcount_0_data": {
+        "ports": [
+          "hcount_0/data",
+          "comparator_0/hcount"
+        ]
+      },
+      "hcount_0_hsync": {
+        "ports": [
+          "hcount_0/hsync",
+          "Hsync",
+          "color_0/hsync"
+        ]
+      },
+      "vcount_0_data": {
+        "ports": [
+          "vcount_0/data",
+          "comparator_0/vcount"
+        ]
+      },
+      "vcount_0_vsync": {
+        "ports": [
+          "vcount_0/vsync",
+          "Vsync",
+          "color_0/vsync"
+        ]
+      }
+    }
+  }
+}

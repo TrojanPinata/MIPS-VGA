@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1,089.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="2,466.000001 us"></ZoomEndTime>
+      <Cursor1Time time="2,023.000000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="157"></NameColumnWidth>
+      <ValueColumnWidth column_width="75"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="14" />
+   <wvobject fp_name="/testbench/clk_tb" type="logic">
+      <obj_property name="ElementShortName">clk_tb</obj_property>
+      <obj_property name="ObjectShortName">clk_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Hsync_tb" type="logic">
+      <obj_property name="ElementShortName">Hsync_tb</obj_property>
+      <obj_property name="ObjectShortName">Hsync_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Vsync_tb" type="logic">
+      <obj_property name="ElementShortName">Vsync_tb</obj_property>
+      <obj_property name="ObjectShortName">Vsync_tb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/vgaRed_tb" type="array">
+      <obj_property name="ElementShortName">vgaRed_tb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">vgaRed_tb[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/vgaGreen_tb" type="array">
+      <obj_property name="ElementShortName">vgaGreen_tb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">vgaGreen_tb[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/vgaBlue_tb" type="array">
+      <obj_property name="ElementShortName">vgaBlue_tb[3:0]</obj_property>
+      <obj_property name="ObjectShortName">vgaBlue_tb[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Controller_i/Controller_i/color_0/U0/addr" type="array">
+      <obj_property name="ElementShortName">addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Controller_i/Controller_i/color_0/U0/memaddr" type="array">
+      <obj_property name="ElementShortName">memaddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">memaddr[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Controller_i/Controller_i/comparator_0/U0/displaytoggle" type="logic">
+      <obj_property name="ElementShortName">displaytoggle</obj_property>
+      <obj_property name="ObjectShortName">displaytoggle</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Controller_i/Controller_i/comparator_0/U0/vcount" type="array">
+      <obj_property name="ElementShortName">vcount[19:0]</obj_property>
+      <obj_property name="ObjectShortName">vcount[19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Controller_i/Controller_i/comparator_0/U0/hcount" type="array">
+      <obj_property name="ElementShortName">hcount[9:0]</obj_property>
+      <obj_property name="ObjectShortName">hcount[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Controller_i/Controller_i/hcount_0/U0/count" type="array">
+      <obj_property name="ElementShortName">count[9:0]</obj_property>
+      <obj_property name="ObjectShortName">count[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Controller_i/Controller_i/vcount_0/U0/count" type="array">
+      <obj_property name="ElementShortName">count[19:0]</obj_property>
+      <obj_property name="ObjectShortName">count[19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/Controller_i/Controller_i/hcount_0/U0/master" type="array">
+      <obj_property name="ElementShortName">master[31:0]</obj_property>
+      <obj_property name="ObjectShortName">master[31:0]</obj_property>
+   </wvobject>
+</wave_config>
